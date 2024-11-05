@@ -5,7 +5,18 @@ class Dec2Hex
 {
 public static int Arg1;
     public static void main(String args[])    {
-        Arg1 = Integer.parseInt(args[0]);
+        if (args.length == 0) {
+            System.out.println("Error: No decimal number provided. Please provide a number as a command-line argument.");
+            return;
+        }
+
+        try {
+            // Parse the argument to an integer
+            Arg1 = Integer.parseInt(args[0]);
+        } catch () {
+            System.out.println("Error: The argument provided is not a valid integer.");
+            return;
+        }
         char ch[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
         int rem, num;
         num = Arg1;

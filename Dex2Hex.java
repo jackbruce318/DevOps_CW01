@@ -6,15 +6,16 @@ class Dec2Hex
 public static int Arg1;
     public static void main(String args[])    {
         if (args.length == 0) {
-            System.out.println("Error: No decimal number provided. Please provide a number as a command-line argument.");
+            System.out.println("Please enter a valid number");
             return;
         }
 
         try {
-            // Parse the argument to an integer
+            // Attempt to pass Arg1 as an integer
             Arg1 = Integer.parseInt(args[0]);
-        } catch () {
-            System.out.println("Error: The argument provided is not a valid integer.");
+        } 
+        catch (NumberFormatException e) {
+            System.out.println("Please enter a valid number");
             return;
         }
         char ch[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};

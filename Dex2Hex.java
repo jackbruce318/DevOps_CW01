@@ -7,8 +7,6 @@ public static int Arg1;
     public static void main(String args[])    {
         //if no arguments are provided then this handles the error
 
-        System.out.println("Welcome to the Dec2Hex Application!")
-
         if (args.length == 0) {
             System.out.println("Please enter a valid decimal number");
             return;
@@ -26,7 +24,10 @@ public static int Arg1;
         num = Arg1;
         String hexadecimal="";
         System.out.println("Converting the Decimal Value " + num + " to Hex...");
-
+          
+        if (num == 0){
+        hexadecimal = "0";
+        }
         while(num != 0)
         {
             rem=num%16;

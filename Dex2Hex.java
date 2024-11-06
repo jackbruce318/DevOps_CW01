@@ -24,7 +24,8 @@ public static int Arg1;
         num = Arg1;
         String hexadecimal="";
         System.out.println("Converting the Decimal Value " + num + " to Hex...");
-          
+        
+        //bug fix line because converter cannot process 0
         if (num == 0){
         hexadecimal = "0";
         }
